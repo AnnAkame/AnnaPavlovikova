@@ -96,6 +96,18 @@
 //     ['x', 0, 0, 0, 0, 0, 0, 0, 0, 'x']
 //     ['x', 'x', 'x', 'x', 'x', 'x','x']
 
+// let matrix = [];
+// let x = [];
+// for ( let i = 0; i < 10; i++){
+//     const arr = [];
+//     for ( let j = 0; j<10; j++){
+//         let el = i === 0|| i === 9 || j === 9 || j === 0 ? 'x' : 0;1
+//     arr.push(el)
+// }
+//     matrix.push(arr);
+// }
+//     console.log(matrix);
+//
 
 // 15*) нарисовать матрицу (таблица умножения)
 // 0: (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -108,7 +120,28 @@
 // 7: (10) [8, 16, 24, 32, 40, 48, 56, 64, 72, 80]
 // 8: (10) [9, 18, 27, 36, 45, 54, 63, 72, 81, 90]
 // 9: (10) [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-//
+// let matrix = [];
+// let x = [];
+// for ( let i = 1; i <= 10; i++){
+//     const arr = [];
+//     for ( let j = 1; j<=10; j++){
+//         let el = i*j;
+//     arr.push(el)
+// }
+//     matrix.push(arr);
+// }
+//     console.log(matrix);
+
 // 16*)	Написать программу которая будет склонять слово
 // 	“товар” в зависимости от количества товаров в корзине.
 //     Например 1 - товар, 4 - товара, 6 - товаров.
+sequence = + prompt('skoka nnada');
+if(sequence % 10 > 4 && sequence % 10 < 20){
+    console.log(`${sequence} товаров`)
+} else if(sequence % 10 === 1 && sequence % 100 !== 11) {
+    console.log(`${sequence} товар`)
+}else if ( sequence % 10 >= 2 && sequence % 10 <= 4) {
+    console.log(`${sequence} товара`)
+}else{
+    console.log(`${sequence} товаров`)
+}
