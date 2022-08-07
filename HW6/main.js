@@ -67,16 +67,24 @@ class frontEndDeveloper extends Human {
     }
 
     fullmoney() {
-       let exp = this.experience - this.experience[2]
-        console.log(exp)
+       let a =  this.experience.map((element) => {
+            let time = Math.round((element.end - element.start)/ (1000 * 60* 24 * 60  * 30)) * element.salaryPerMonth;
+            return time
+        }
+        );
+return a.reduce((acc , sum) =>  acc + sum, 0);
+
+        // return Math.round((this.experience[0].end - this.experience[0].start) / (1000 * 60* 24 * 60  * 30)) * this.experience[0].salaryPerMonth +
+        //     Math.round((this.experience[1].end - this.experience[1].start) / (1000 * 60 * 60 * 24 * 30)) * this.experience[1].salaryPerMonth;
+
     }
 }
 
 const Vova= new frontEndDeveloper(160, 60, 'Vova', new Date(2000, 11), 'male', false, new Date( 2018, 1));
 
 Vova.newExperience =  [{
-        start: new Date(2018,11),
-        end: new Date(2019, 12),
+        start: new Date('11-15-2018'),
+        end: new Date('12-04-2019'),
         salaryPerMonth: 1000,
         position: 'middle',
         companyName: 'Oracle',
@@ -88,8 +96,8 @@ Vova.newExperience =  [{
         position: 'senior',
         companyName: 'Karamba',
     }];
-console.log(Vova.fullmoney)
-console.log(Vova.experience[0].start)
+console.log(Vova.fullmoney());
+
 class Builder extends Human {
     constructor(height, weight, name, birthdayYear, gender, disability) {
         super(height, weight, name, birthdayYear, gender, disability);
