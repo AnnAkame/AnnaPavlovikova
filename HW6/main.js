@@ -53,7 +53,11 @@ class frontEndDeveloper extends Human {
     set newExperience(experience) {
         this.experience = experience
     }
-
+    set addExperience(experience) {
+       return {
+           ...this.experience.push(experience)
+       }
+}
     get getInfo() {
         return {
             ...super.getInfo,
@@ -78,6 +82,12 @@ return a.reduce((acc , sum) =>  acc + sum, 0);
         //     Math.round((this.experience[1].end - this.experience[1].start) / (1000 * 60 * 60 * 24 * 30)) * this.experience[1].salaryPerMonth;
 
     }
+    workHistory(company){
+      let a =  this.experience.filter ((element) => {
+         return  element.companyName === company
+        })
+return a
+    }
 }
 
 const Vova= new frontEndDeveloper(160, 60, 'Vova', new Date(2000, 11), 'male', false, new Date( 2018, 1));
@@ -90,19 +100,37 @@ Vova.newExperience =  [{
         companyName: 'Oracle',
 },
     {
-        start: new Date(2019,1),
+       start: new Date(2019,1),
         end: new Date(2022, 8),
         salaryPerMonth: 3000,
         position: 'senior',
         companyName: 'Karamba',
     }];
-console.log(Vova.fullmoney());
+Vova.addExperience = [{
+    start: 333333333
+}]
+
 
 class Builder extends Human {
-    constructor(height, weight, name, birthdayYear, gender, disability) {
+    constructor(height, weight, name, birthdayYear, gender, disability, location, tools, speed) {
         super(height, weight, name, birthdayYear, gender, disability);
+        this.location = location;
+        this.tools = tools;
+        this.speed = speed;
     }
-}
+    buildHouse(work){
+       let time = this.speed*work;
+        if (time<1440) {
+            let hour = Math.round(time / 60);
+            return (`${hour} ч.`)
+        } else if ( time < 10080){
+        }
+
+}}
+const Prorab = new Builder(150,50,'Prorab', new Date ("20-10-2003"), 'male',
+    true, "XTZ", ['сверло','kaban'],  50);
+console.log(Prorab.buildHouse(5))
+console.log(9%4)
 // 1.3) Класс Фронтенд разработчик:
 //     Добавить доп. свойства:
 // - начало карьеры(формат Date),
