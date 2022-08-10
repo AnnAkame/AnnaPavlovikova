@@ -124,13 +124,37 @@ class Builder extends Human {
             let hour = Math.round(time / 60);
             return (`${hour} ч.`)
         } else if ( time < 10080){
+            let day = parseInt(time / 60 / 24);
+            let hour = parseInt(time / 60 % 24) ;
+            return (`${day} д. ${hour} ч.`);
+        } else if ( time < 43200){
+            let week =parseInt(time/60/24/7);
+            let day = parseInt(time / 60 / 24 % 7);
+            let hour = parseInt(time / 60 % 24) ;
+            return (`${week} н. ${day} д. ${hour} ч.`);
+        } else if ( time < 525600){
+            let month = parseInt( time / 60 / 24 / 7 / 4);
+            let week =parseInt(time/60/24/7%4);
+            let day = parseInt(time / 60 / 24 % 7);
+            let hour = parseInt(time / 60 % 24) ;
+            return (`${month} м. ${week} н. ${day} д. ${hour} ч.`);
+        }else if ( time > 525600){
+            let year = parseInt(time/525600)
+            let month = parseInt( time / 60 / 24 / 7 / 4 % 12);
+            let week =parseInt(time/60/24/7%4);
+            let day = parseInt(time / 60 / 24 % 7);
+            let hour = parseInt(time / 60 % 24) ;
+            return (`${year} г. ${month} м. ${week} н. ${day} д. ${hour} ч.`);
         }
 
-}}
+
+
+
+    }}
 const Prorab = new Builder(150,50,'Prorab', new Date ("20-10-2003"), 'male',
     true, "XTZ", ['сверло','kaban'],  50);
-console.log(Prorab.buildHouse(5))
-console.log(9%4)
+console.log(Prorab.buildHouse(50000))
+
 // 1.3) Класс Фронтенд разработчик:
 //     Добавить доп. свойства:
 // - начало карьеры(формат Date),
