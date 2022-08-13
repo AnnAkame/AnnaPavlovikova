@@ -1,0 +1,235 @@
+.Background {
+    background-color: black;
+    height: 1772px;
+    width: 1400px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+.buble1 {
+    position: absolute;
+    width: 137px;
+    height: 137px;
+    Top: 68px;
+    Left: 74px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+}
+.buble2 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 91px;
+    top: 453px;
+}
+.buble3 {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 238px;
+    top: 337px;
+}
+.buble4 {
+    position: absolute;
+    width: 83px;
+    height: 83px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 1134px;
+    top: 68px;
+}
+.buble5 {
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 1217px;
+    top: 453px;
+}
+.buble6 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 364px;
+    top: 484px;
+}
+.buble7 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 895px;
+    top: 484px;
+}.buble8 {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 730px;
+    top: 23px;
+}.buble9 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 1134px;
+    top: 294px;
+}.buble10 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 459px;
+    top: 47px;
+}
+.btn {
+    position: absolute;
+    width: 264px;
+    height: 73px;
+    background: #FFFFFF;
+    box-shadow: 12px 32px 80px -20px rgba(0, 0, 0, 0.12);
+    border-radius: 32px;
+    left: 570px;
+    top: 301px;
+}
+.btn::after{
+    position: absolute;
+    height: 22px;
+    width: 142px;
+    content: "GENERATE NEW";
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #000000;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    left: -20px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.btn::before{
+    position: absolute;
+    height: 22px;
+    width: 142px;
+    content: "NFT";
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.04em;
+    color: #750505;
+    margin-left: 170px;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
+}
+.card-wrapper{
+    padding-top: 665px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+.Cards{
+    box-sizing: border-box;
+    position: relative;
+    width: 178px;
+    height: 251px;
+    background: #3E3E3E;
+    border-radius: 12px;
+    margin-left: 43px;
+    margin-bottom: 40px;
+    z-index: 50;
+    overflow: hidden;
+}
+.btn-delete{
+    display: none;
+    overflow: fragments;
+}
+.Cards:hover .btn-delete{
+    bottom: -23px;
+    display: block;
+    position: absolute;
+    width: 178px;
+    height: 257px;
+    background: #FFFFFF;
+    border-radius: 9px;
+}
+.img{
+    position: absolute;
+    width: 164px;
+    height: 194px;
+    left: 3.77%;
+    right: 3.77%;
+    top: 2.56%;
+    bottom: 19.87%;
+    background-image: url(https://random.imagecdn.app/500/500);
+    border-radius: 10px;
+    z-index: 10;
+}
+.card-name{
+    z-index: 100;
+    position: absolute;
+    left: 9.43%;
+    right: 46.7%;
+    top: 6.41%;
+    bottom: 85.9%;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    z-index: 15;
+}
+.card-descriptions{
+    position: absolute;
+    left: 9.43%;
+    right: 31.13%;
+    top: 86.54%;
+    bottom: 6.41%;
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
