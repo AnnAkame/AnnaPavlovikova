@@ -1,27 +1,32 @@
 const btn = document.querySelector(".btn");
-const cardWrapper =document.querySelector('.card-wrapper');
-const nft = [];
+    const cardWrapper =document.querySelector('.card-wrapper');
+    let nft = [{
+    }];
 
-btn.addEventListener('click', ()=>{
-    nft.push(getRandom())
-    nftRender()
-    console.log(nft)
-})
+    btn.addEventListener('click', ()=>{
+        nftRender(nft.push(getRandomId()))
+        console.log(nft)
 
-function nftRender() {
-    let result = "";
-    for( let i = 0; i<nft.length; i++){
-        result += `<div class="Cards">
+    })
+const btnDelete = document.querySelector('.delete');
+function deleteCard(cardId) {
+        nftRender(nft = nft.filter(el => el.id !==cardId));
+
+}
+
+    function nftRender() {
+        let result = "";
+        for( let i = 0; i<nft.length; i++){
+            result += `<div class="Cards">
         <p class = "card-name">Card Name</p>
         <p class = "card-descriptions"> Card Descriptions</p>
         <div class = "img"></div>
-        <button class="btn-delete"> delete </button>
+        <button class="btn-delete" onclick="deleteCard(${nft[i].id})"></button>
         </div>`}
 
-    cardWrapper.innerHTML = result;
-}
+        cardWrapper.innerHTML = result;
+    }
 
-function getRandom() {
-    return Math.floor(Math.round()*220)
-
-}
+    function getRandomId() {
+        return{
+            id: Math.floor( Math.random()*1000 )}}
